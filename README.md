@@ -23,7 +23,9 @@ Les expérimentations utilisent :
 
 Cette répartition correspond aux fichiers effectivement utilisés dans le projet et diffère du découpage de référence habituellement associé à UNSW-NB15.
 
-Les deux fichiers CSV ne sont pas inclus dans ce dépôt. Ils peuvent être récupérés depuis la [page officielle UNSW-NB15](https://research.unsw.edu.au/projects/unsw-nb15-dataset) et doivent être placés à la racine du projet, avec les noms indiqués ci-dessus.
+**Les deux fichiers CSV sont inclus à la racine de ce dépôt GitHub**, afin de faciliter la reproduction des expérimentations et l'exécution des notebooks.
+
+Le jeu de données UNSW-NB15 provient de l'UNSW Canberra. Sa source officielle est accessible depuis la [page officielle UNSW-NB15](https://research.unsw.edu.au/projects/unsw-nb15-dataset).
 
 ## 3. Organisation du projet
 
@@ -32,14 +34,19 @@ network-anomaly-detection/
 ├── 01_cadrage_eda.ipynb
 ├── 02_modelisation.ipynb
 ├── 03_decision_roi.ipynb
+├── UNSW_NB15_training-set.csv
+├── UNSW_NB15_testing-set.csv
 ├── reports/
 │   └── figures/
+│       ├── comparaison_detection_attaques.png
+│       ├── comparaison_fausses_alertes.png
+│       └── sensibilite_roi.png
 ├── README.md
 ├── requirements.txt
 └── .gitignore
 ```
 
-Les deux fichiers CSV sont à placer localement à la racine, au même niveau que les notebooks.
+Les deux fichiers CSV sont directement disponibles dans le dépôt, au même niveau que les notebooks. Aucun téléchargement supplémentaire des données n'est nécessaire après le clonage du dépôt.
 
 ### Rôle des notebooks
 
@@ -118,7 +125,9 @@ La recommandation est d'envisager le modèle D dans le cadre d'un **pilote avec 
 - Python 3
 - Jupyter Notebook ou JupyterLab
 - Les bibliothèques Python répertoriées dans `requirements.txt`
-- Les deux fichiers CSV UNSW-NB15 utilisés dans le projet
+- Git pour cloner le dépôt
+
+Les deux fichiers CSV nécessaires aux expérimentations sont déjà inclus dans le dépôt.
 
 ### Installation
 
@@ -149,11 +158,13 @@ Installer les dépendances :
 pip install -r requirements.txt
 ```
 
-Placer les fichiers CSV à la racine du dossier, puis lancer Jupyter :
+Lancer Jupyter Notebook depuis la racine du projet :
 
 ```bash
 jupyter notebook
 ```
+
+Les fichiers CSV étant déjà présents dans le dossier, aucune étape supplémentaire de téléchargement ou de déplacement des données n'est nécessaire.
 
 Exécuter les notebooks dans cet ordre :
 
