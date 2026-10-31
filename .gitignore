@@ -1,0 +1,18 @@
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Fichiers temporaires
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Données UNSW-NB15 : publication à vérifier
+UNSW_NB15_training-set.csv
+UNSW_NB15_testing-set.csv
